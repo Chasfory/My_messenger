@@ -25,7 +25,7 @@ int main(int ac, char **av)
     }
 
     serv_addr.sin_family = AF_INET;
-    serv_addr.sin_port = htons(3020);
+    serv_addr.sin_port = htons(atoi(av[1]));
 
     int result_connect = connect(sockcl, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
 
